@@ -17,3 +17,15 @@ def index():
 @app.route('/contactanos', methods=['GET', 'POST'])
 def contactanos():
   return render_template('contactanos.html')
+
+@app.route('/catalogo')
+def catalogo():
+  return render_template('catalogo.html')
+
+@app.route('/conocenos')
+def conocenos():
+  return render_template('conocenos.html')
+
+@app.route('/faq')
+def faq():
+  return render_template('faq.html')

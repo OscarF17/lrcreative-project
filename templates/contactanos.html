@@ -26,85 +26,120 @@
     />
   </head>
   <body>
-    <h1 class="page-title text-center mb-5">¡Contáctanos!</h1>
-    <div class="container redes">
-      <div class="row">
-        <div class="col text-center">
-          <img
-            class="redes__img"
-            src="../static/images/contactanos/whatsapp.png"
-            alt="WhatsApp"
-          />
-          <p class="redes__text">+52 5555 5555</p>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light menu align-middle align-self-center"
+      >
+        <div class="menu__logo">
+          <a class="menu__link align-middle" href="/">LRCreative</a>
         </div>
-        <div class="col text-center">
-          <img
-            class="redes__img"
-            src="../static/images/contactanos/twitter.png"
-            alt="Twitter"
-          />
-          <p class="redes__text">@LRCreative</p>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="menu__item menu__item1" href="/catalogo">Catálogo</a>
+            <a class="active menu__item menu__item2" href="/contactanos"
+              >Contacto <span class="sr-only">(Actual)</span></a
+            >
+            <a class="menu__item menu__item3" href="/conocenos">Conócenos</a>
+            <a class="menu__item menu__item4" href="/faq"
+              >Preguntas Frecuentes</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1 class="page-title text-center mb-5">¡Contáctanos!</h1>
+      <div class="container redes">
+        <div class="row">
+          <div class="col text-center">
+            <img
+              class="redes__img"
+              src="../static/images/contactanos/whatsapp.png"
+              alt="WhatsApp"
+            />
+            <p class="redes__text">+52 5555 5555</p>
+          </div>
+          <div class="col text-center">
+            <img
+              class="redes__img"
+              src="../static/images/contactanos/twitter.png"
+              alt="Twitter"
+            />
+            <p class="redes__text">@LRCreative</p>
+          </div>
         </div>
       </div>
-    </div>
-    <h2 class="form-title text-center">Contacto Directo</h2>
+      <h2 class="form-title text-center">Contacto Directo</h2>
 
-    <form action="/contactanos" method="post" class="contacto-form mt-5 mb-5">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <label for="nombre">Nombre</label>
-            <br />
-            <input
-              class="contacto__input"
-              type="text"
-              placeholder="Nombre..."
-              id="nombre"
-              name="nombre"
-            />
+      <form action="/contactanos" method="post" class="contacto-form mt-5 mb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <label for="nombre">Nombre</label>
+              <br />
+              <input
+                class="contacto__input"
+                type="text"
+                placeholder="Nombre..."
+                id="nombre"
+                name="nombre"
+              />
+            </div>
+            <div class="col">
+              <label for="correo">Correo electrónico</label>
+              <br />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="contacto__input"
+                placeholder="ejemplo@email.com"
+              />
+            </div>
           </div>
-          <div class="col">
-            <label for="correo">Correo electrónico</label>
-            <br />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class="contacto__input"
-              placeholder="ejemplo@email.com"
-            />
+          <div class="row">
+            <div class="col">
+              <label for="telefono">Teléfono</label>
+              <br />
+              <input
+                class="contacto__input"
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="+55 555 555"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label for="mensaje">Mensaje</label>
+              <br />
+              <textarea
+                class="contacto__input contacto__input-big"
+                type="textarea"
+                name="mensaje"
+                id="mensaje"
+                placeholder="Estamos para servirte"
+              ></textarea>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <label for="telefono">Teléfono</label>
-            <br />
-            <input
-              class="contacto__input"
-              type="tel"
-              id="telefono"
-              name="telefono"
-              placeholder="+55 555 555"
-            />
-          </div>
+        <div class="text-center mt-5">
+          <button class="contacto-form__btn" type="submit">Enviar</button>
         </div>
-        <div class="row">
-          <div class="col">
-            <label for="mensaje">Mensaje</label>
-            <br />
-            <textarea
-              class="contacto__input contacto__input-big"
-              type="textarea"
-              name="mensaje"
-              id="mensaje"
-              placeholder="Estamos para servirte"
-            ></textarea>
-          </div>
-        </div>
-      </div>
-      <div class="text-center mt-5">
-        <button class="contacto-form__btn" type="submit">Enviar</button>
-      </div>
-    </form>
+      </form>
+    </main>
+    <footer></footer>
   </body>
 </html>

@@ -26,132 +26,169 @@
     />
   </head>
   <body>
-    <!-- Carrusel de imágenes -->
-    <div class="container">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <img
-              src="../static/images/index/c1"
-              alt="img1"
-              style="width: 100%; height: 10%"
-            />
-          </div>
-
-          <div class="item">
-            <img
-              src="../static/images/index/c2.jpg"
-              alt="img2"
-              style="width: 100%"
-            />
-          </div>
-
-          <div class="item">
-            <img
-              src="../static/images/index/c3.jpg"
-              alt="img3"
-              style="width: 100%"
-            />
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light menu align-middle align-self-center"
+      >
+        <div class="menu__logo">
+          <a class="menu__link align-middle" href="/">LRCreative</a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="menu__item menu__item1" href="/catalogo">Catálogo</a>
+            <a class="menu__item menu__item2" href="/contactanos">Contacto </a>
+            <a class="menu__item menu__item3" href="/conocenos">Conócenos</a>
+            <a class="menu__item menu__item4" href="/faq"
+              >Preguntas Frecuentes</a
+            >
           </div>
         </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Carrusel de imágenes -->
+      <div class="container mb-5">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
 
-        <!-- Controles -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Next</span>
-        </a>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img
+                src="../static/images/index/c1"
+                alt="img1"
+                style="width: 100%; height: 10%"
+              />
+            </div>
+
+            <div class="item">
+              <img
+                src="../static/images/index/c2.jpg"
+                alt="img2"
+                style="width: 100%"
+              />
+            </div>
+
+            <div class="item">
+              <img
+                src="../static/images/index/c3.jpg"
+                alt="img3"
+                style="width: 100%"
+              />
+            </div>
+          </div>
+
+          <!-- Controles -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="right carousel-control"
+            href="#myCarousel"
+            data-slide="next"
+          >
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <div class="beneficios mb-5">
-      <div class="container">
+      <div class="beneficios mb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <img
+                class="beneficios__img align-middle"
+                src="../static/images/thumbs-up.png"
+                alt=""
+              />
+              <p class="beneficios__text align-middle">Calidad</p>
+            </div>
+            <div class="col">
+              <img
+                class="beneficios__img"
+                src="../static/images/escudo.png"
+                alt=""
+              />
+              <p class="beneficios__text align-middle">Seguridad</p>
+            </div>
+            <div class="col">
+              <img
+                class="beneficios__img"
+                src="../static/images/etiqueta.png"
+                alt=""
+              />
+              <p class="beneficios__text align-middle">Precio</p>
+            </div>
+            <div class="col">
+              <img
+                class="beneficios__img"
+                src="../static/images/tiempo.png"
+                alt=""
+              />
+              <p class="beneficios__text align-middle">Tiempo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="page-subtitle text-center">Nuestros Productos</h2>
+      <h3 class="text-center page-h3 mb-5">
+        Maquila e impresión en toda clase de producos
+      </h3>
+
+      <div class="container productos">
         <div class="row">
-          <div class="col">
-            <img
-              class="beneficios__img align-middle"
-              src="../static/images/thumbs-up.png"
-              alt=""
-            />
-            <p class="beneficios__text align-middle">Calidad</p>
+          <div class="col text-center">
+            <a href="#" class="productos__link">
+              <img src="../static/images/index/playera.png" alt="" />
+              <h4 class="productos__text">Playeras</h4>
+            </a>
           </div>
-          <div class="col">
-            <img
-              class="beneficios__img"
-              src="../static/images/escudo.png"
-              alt=""
-            />
-            <p class="beneficios__text align-middle">Seguridad</p>
+          <div class="col text-center">
+            <a href="#" class="productos__link">
+              <img src="../static/images/index/gorra.png" alt="" />
+              <h4 class="productos__text">Gorras</h4>
+            </a>
           </div>
-          <div class="col">
-            <img
-              class="beneficios__img"
-              src="../static/images/etiqueta.png"
-              alt=""
-            />
-            <p class="beneficios__text align-middle">Precio</p>
+          <div class="col text-center">
+            <a href="#" class="productos__link">
+              <img
+                style="margin-left: 35px"
+                src="../static/images/index/taza.png"
+                alt=""
+              />
+              <h4 class="productos__text">Tazas</h4>
+            </a>
           </div>
-          <div class="col">
-            <img
-              class="beneficios__img"
-              src="../static/images/tiempo.png"
-              alt=""
-            />
-            <p class="beneficios__text align-middle">Tiempo</p>
+          <div class="col text-center">
+            <a href="#" class="productos__link">
+              <img src="../static/images/index/termo.png" alt="" />
+              <h4 class="productos__text">Termos</h4>
+            </a>
           </div>
         </div>
       </div>
-    </div>
-    <h2 class="page-subtitle text-center">Nuestros Productos</h2>
-    <h3 class="text-center page-h3 mb-5">
-      Maquila e impresión en toda clase de producos
-    </h3>
-
-    <div class="container productos">
-      <div class="row">
-        <div class="col text-center">
-          <a href="#" class="productos__link">
-            <img src="../static/images/index/playera.png" alt="" />
-            <h4 class="productos__text">Playeras</h4>
-          </a>
-        </div>
-        <div class="col text-center">
-          <a href="#" class="productos__link">
-            <img src="../static/images/index/gorra.png" alt="" />
-            <h4 class="productos__text">Gorras</h4>
-          </a>
-        </div>
-        <div class="col text-center">
-          <a href="#" class="productos__link">
-            <img
-              style="margin-left: 35px"
-              src="../static/images/index/taza.png"
-              alt=""
-            />
-            <h4 class="productos__text">Tazas</h4>
-          </a>
-        </div>
-        <div class="col text-center">
-          <a href="#" class="productos__link">
-            <img src="../static/images/index/termo.png" alt="" />
-            <h4 class="productos__text">Termos</h4>
-          </a>
-        </div>
+      <div class="btn-div text-center">
+        <a href="#" class="productos__btn">¡Checa nuestros productos!</a>
       </div>
-    </div>
-    <div class="btn-div text-center">
-      <a href="#" class="productos__btn">¡Checa nuestros productos!</a>
-    </div>
+    </main>
+    <footer></footer>
   </body>
 </html>
