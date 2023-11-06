@@ -1,0 +1,64 @@
+.beneficios {
+  background-color: #ffc0cb;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.beneficios__img {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.beneficios__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 35px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.page-subtitle {
+  font-family: "Roboto Serif";
+  font-size: 48px;
+  color: #ee6a81;
+}
+
+.page-h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+}
+
+.productos__link {
+  text-decoration: none;
+}
+
+.productos__link:hover {
+  text-decoration: underline;
+}
+
+.productos__text {
+  margin-top: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  color: black;
+}
+
+.btn-div {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.productos__btn {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4d35e;
+  border-radius: 15px;
+  padding: 30px;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+}
+
+.productos__btn:hover {
+  color: black;
+}

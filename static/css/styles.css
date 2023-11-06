@@ -1,0 +1,9 @@
+body {
+  background-color: #f4faff;
+}
+
+.page-title {
+  font-family: "Roboto Serif", sans-serif;
+  font-size: 64px;
+  font-weight: bold 800;
+}

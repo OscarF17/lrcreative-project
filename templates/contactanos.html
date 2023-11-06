@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LRCreative</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/css/styles.css" />
+    <link rel="stylesheet" href="../static/css/contactanos.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:opsz,wght@8..144,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="page-title text-center mb-5">¡Contáctanos!</h1>
+    <div class="container redes">
+      <div class="row">
+        <div class="col text-center">
+          <img
+            class="redes__img"
+            src="../static/images/contactanos/whatsapp.png"
+            alt="WhatsApp"
+          />
+          <p class="redes__text">+52 5555 5555</p>
+        </div>
+        <div class="col text-center">
+          <img
+            class="redes__img"
+            src="../static/images/contactanos/twitter.png"
+            alt="Twitter"
+          />
+          <p class="redes__text">@LRCreative</p>
+        </div>
+      </div>
+    </div>
+    <h2 class="form-title text-center">Contacto Directo</h2>
+
+    <form action="/contactanos" method="post" class="contacto-form mt-5 mb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <label for="nombre">Nombre</label>
+            <br />
+            <input
+              class="contacto__input"
+              type="text"
+              placeholder="Nombre..."
+              id="nombre"
+              name="nombre"
+            />
+          </div>
+          <div class="col">
+            <label for="correo">Correo electrónico</label>
+            <br />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="contacto__input"
+              placeholder="ejemplo@email.com"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="telefono">Teléfono</label>
+            <br />
+            <input
+              class="contacto__input"
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="+55 555 555"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="mensaje">Mensaje</label>
+            <br />
+            <textarea
+              class="contacto__input contacto__input-big"
+              type="textarea"
+              name="mensaje"
+              id="mensaje"
+              placeholder="Estamos para servirte"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <button class="contacto-form__btn" type="submit">Enviar</button>
+      </div>
+    </form>
+  </body>
+</html>

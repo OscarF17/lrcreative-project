@@ -1,0 +1,36 @@
+.redes__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+}
+
+.form-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+}
+
+.contacto-form {
+  width: 50%;
+  margin: auto;
+  font-size: 24px;
+}
+
+.contacto__input {
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.contacto__input-big {
+  height: 200px;
+}
+
+.contacto-form__btn {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4d35e;
+  width: 250px;
+  border-radius: 15px;
+  padding: 30px;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+}
