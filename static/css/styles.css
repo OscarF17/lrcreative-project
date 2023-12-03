@@ -47,3 +47,49 @@ body {
     color: black;
     text-decoration: underline;
 }
+
+.imagenes {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productos__link {
+  text-decoration: none;
+}
+
+.productos__link:hover {
+  text-decoration: underline;
+}
+
+.productos__text {
+  margin-top: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  color: black;
+}
+
+.btn-div {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.productos__btn {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4d35e;
+  border-radius: 15px;
+  padding: 18px;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+}
+
+.productos__btn:hover {
+  color: black;
+}
+
+.espaciado-lineas {
+  font-size: 20px;
+  line-height: 1.5em; 
+}
