@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, session, redirect
 from flask_mysqldb import MySQL 
+from werkzeug.security import check_password_hash, generate_password_hash
 
 app = Flask(__name__)
 mysql = MySQL(app)
@@ -29,3 +30,30 @@ def conocenos():
 @app.route('/faq')
 def faq():
   return render_template('faq.html')
+
+@app.route('/loginAdmin', methods=['POST'])
+def loginAdmin():
+    
+    # Conseguir todo del forms
+    nombreAdmin = request.form['nombreAdmin']
+    password = request.form['password']
+
+    # Conecta con la base de datos
+    cursor = mysql.connection.cursor()
+
+    # Busca al usuario en la base de datos
+    cursor.execute("SELECT id, nombre, password, mail FROM Usuario WHERE nombre = %s", (nombreAdmin,))
+    usuario = cursor.fetchone()
+
+    # Cerrar Cursor
+    cursor.close()
+
+    # Verifica la existencia del usuario y verificar contraseña
+    if usuario and check_password_hash(usuario[2], password): # CHECAR HASH
+        
+        # Establece la información del usuario en la sesión
+        session['user_info'] = {'id': usuario[0], 'nombre': usuario[1], 'correo': usuario[3]}
+        
+        return render_template('admin.html')
+    else:
+        return redirect(url_for('/login'))
