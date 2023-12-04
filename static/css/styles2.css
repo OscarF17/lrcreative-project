@@ -370,10 +370,26 @@ footer {
   font-size: 25px;
 }
 
+.admin-h4 {
+  font-size: 25px;
+}
+
+.admin-h5 {
+  font-size: 25px;
+}
+
 .admin-text {
   font-size: 20px;
 }
 
 .admin-link {
+  font-size: 20px;
+}
+
+.info-cliente {
+  font-size: 20px;
+}
+
+.info-cliente input {
   font-size: 20px;
 }

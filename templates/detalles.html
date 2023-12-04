@@ -77,98 +77,108 @@
       method="post"
       enctype="multipart/form-data"
     >
-      <h2>Producto</h2>
-      <h3>Producto: {{detalles[17]}}</h3>
-      <h4>Estado: {{detalles[9]}}</h4>
-      <h5>Realizado : {{detalles[8]}}</h5>
-      <h5>Actualizado en: {{detalles[10]}}</h5>
-      <select name="estado" id="estado">
-        <option value="pendiente" selected>Pendiente</option>
-        <option value="completado">Completado</option>
+      <h2 class="admin-h2 mb-3"><strong>Producto</strong></h2>
+      <h3 class="admin-h3 mb-3">Producto: {{detalles[17]}}</h3>
+      <h4 class="admin-h4 mb-3">Estado: {{detalles[9]}}</h4>
+      <p class="admin-text mb-3">Actualizar estado</p>
+      <select name="estado" id="estado" class="admin-text mb-3">
+        <option value="pendiente" {{ 'selected' if detalles[9] == 'pendiente'}}>Pendiente</option>
+        <option value="completado" {{'selected' if detalles[9] == 'completado'}} >Completado</option>
       </select>
-      <p>Cantidad: {{detalles[14]}}</p>
-      <p>Precio unitario: {{detalles[18]}}</p>
-      <p>Total: {{detalles[14] * detalles[18]}}</p>
-      <p>Método de pago</p>
+      <h5 class="admin-h5 mb-3">Realizado : {{detalles[8]}}</h5>
+      <h5 class="admin-h5 mb-3">Actualizado en: {{detalles[10]}}</h5>
+      <div class="admin-text mb-3">
+        <p>Cantidad: {{detalles[14]}}</p>
+        <p>Precio unitario: {{detalles[18]}}</p>
+        <p>Total: {{detalles[14] * detalles[18]}}</p>
+        <p>Método de pago</p>
+      </div>
       <img
         src="../static/images/productos/{{detalles[11]}}.png"
         alt="{{detalles[11]}}"
         style="width: 100px"
+        class="mb-4"
       />
-      <h2>Cliente</h2>
-      <div class="form-group">
-        <label for="nombre">Nombre del cliente</label>
-        <input
-          type="text"
-          class="form-control"
-          id="nombre"
-          value="{{detalles[1]}}"
-          name="nombre"
-        />
+      <div class="info-cliente">
+        <h2 class="admin-h2 mt-4"><strong>Información del cliente</strong></h2>
+        <div class="form-group">
+          <label class="admin-text" for="nombre">Nombre del cliente</label>
+          <input
+            type="text"
+            class="form-control admin-text"
+            id="nombre"
+            value="{{detalles[1]}}"
+            name="nombre"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo del cliente</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            name="email"
+            value="{{detalles[2]}}"
+          />
+        </div>
+        <h2>Dirección</h2>
+        <div class="form-group">
+          <label for="calle1">Calle 1</label>
+          <input
+            type="text"
+            class="form-control"
+            id="calle1"
+            name="calle1"
+            value="{{detalles[3]}}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="calle2">Calle 2</label>
+          <input
+            type="text"
+            class="form-control"
+            id="calle2"
+            name="calle2"
+            value="{{detalles[4]}}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="ciudad">Ciudad</label>
+          <input
+            type="text"
+            class="form-control"
+            id="ciudad"
+            name="ciudad"
+            value="{{detalles[5]}}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="codigo">Código postal</label>
+          <input
+            type="text"
+            class="form-control"
+            id="codigo"
+            name="codigo"
+            value="{{detalles[6]}}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input
+            type="text"
+            class="form-control"
+            id="telefono"
+            name="telefono"
+            value="{{detalles[7]}}"
+          />
+        </div>
       </div>
-      <div class="form-group">
-        <label for="email">Correo del cliente</label>
-        <input
-          type="text"
-          class="form-control"
-          id="email"
-          name="email"
-          value="{{detalles[2]}}"
-        />
-      </div>
-      <h2>Dirección</h2>
-      <div class="form-group">
-        <label for="calle1">Calle 1</label>
-        <input
-          type="text"
-          class="form-control"
-          id="calle1"
-          name="calle1"
-          value="{{detalles[3]}}"
-        />
-      </div>
-      <div class="form-group">
-        <label for="calle2">Calle 2</label>
-        <input
-          type="text"
-          class="form-control"
-          id="calle2"
-          name="calle2"
-          value="{{detalles[4]}}"
-        />
-      </div>
-      <div class="form-group">
-        <label for="ciudad">Ciudad</label>
-        <input
-          type="text"
-          class="form-control"
-          id="ciudad"
-          name="ciudad"
-          value="{{detalles[5]}}"
-        />
-      </div>
-      <div class="form-group">
-        <label for="codigo">Código postal</label>
-        <input
-          type="text"
-          class="form-control"
-          id="codigo"
-          name="codigo"
-          value="{{detalles[6]}}"
-        />
-      </div>
-      <div class="form-group">
-        <label for="telefono">Teléfono</label>
-        <input
-          type="text"
-          class="form-control"
-          id="telefono"
-          name="telefono"
-          value="{{detalles[7]}}"
-        />
-      </div>
-      <button type="submit " class="btn btn-success">Actualizar pedido</button>
-      <a href="/admin/eliminar/{{detalles[0]}}" class="btn btn-danger"
+      <button type="submit " class="btn btn-success admin-text">
+        Actualizar pedido
+      </button>
+      <a
+        href="/admin/eliminar/{{detalles[0]}}"
+        class="btn btn-danger admin-text"
         >Eliminar pedido</a
       >
     </form>
