@@ -1,5 +1,18 @@
 body {
+  font-family: "Roboto", sans-serif;
   background-color: #f4faff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+h5 {
+  font-size: 20px !important;
 }
 
 .page-title {
@@ -92,4 +105,41 @@ body {
 .espaciado-lineas {
   font-size: 20px;
   line-height: 1.5em; 
+}
+
+.card {
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  cursor: pointer;
+  background-color: #ffc0cb;
+  border: 1px solid #ff91af;
+}
+
+.card-header .btn {
+  text-align: left;
+  width: 100%;
+  color: #000;
+  font-size: 1.25rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #ffc0cb;
+  border: none;
+}
+
+.card-header .btn:hover,
+.card-header .btn:focus {
+  text-decoration: none;
+}
+
+.card-body {
+  background-color: #f8f9fa;
+  border-left: 1px solid #ff91af;
+  border-right: 1px solid #ff91af;
+  border-bottom: 1px solid #ff91af;
+}
+
+.btn-toggle .fas {
+  float: right;
+  transition: transform 0.2s ease-in-out;
 }

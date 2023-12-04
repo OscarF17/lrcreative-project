@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../static/css/styles.css" />
-    <link rel="stylesheet" href="../static/css/contactanos.css" />
+    <link rel="stylesheet" href="../static/css/footer.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -80,11 +80,11 @@
               enctype="multipart/form-data"
               method="POST"
             >
-              <div class="form-group d-flex align-items-center mb-4">
+              <div class="form-group mb-4">
                 <label for="color" class="mr-4"
                   ><h2><strong>Color</strong></h2></label
                 >
-                <select class="form-control" name="color" required>
+                <select class="form-control custom-input" name="color" required>
                   <option value="rojo">Rojo</option>
                   <option value="azul">Azul</option>
                   <option value="verde">Verde</option>
@@ -92,25 +92,25 @@
               </div>
 
               <!-- Formulario para elegir cantidad -->
-              <div class="form-group d-flex align-items-center mb-4">
+              <div class="form-group mb-4">
                 <label for="cantidad" class="mr-2"
                   ><h2><strong>Cantidad</strong></h2></label
                 >
                 <input
                   type="number"
-                  class="form-control"
+                  class="form-control custom-input"
                   name="cantidad"
                   required
                 />
               </div>
 
               <!-- diseño desde archivo -->
-              <div class="form-group mb-4">
+              <div class="form-group mb-4 ">
                 <label for="archivo">
                   <h2><strong>Diseño</strong></h2>
                 </label>
                 <input
-                  class="form-control-file"
+                  class="form-control-file custom-input"
                   type="file"
                   name="archivo"
                   accept="image/*"
@@ -119,7 +119,7 @@
               </div>
               <br />
 
-              <h3>Ingrese sus datos de envío</h3>
+              <h1 class="mt-5">Datos de envío</h1>
               <!-- Nombre del cliente-->
               <div class="form-group mb-4">
                 <label for="archivo"
@@ -127,7 +127,7 @@
                 >
                 <input
                   type="text"
-                  class="form-control-file"
+                  class="form-control custom-input"
                   name="nombre"
                   required
                 />
@@ -140,7 +140,7 @@
                 >
                 <input
                   type="text"
-                  class="form-control-file"
+                  class="form-control custom-input"
                   name="email"
                   required
                 />
@@ -153,7 +153,7 @@
                 >
                 <input
                   type="text"
-                  class="form-control-file"
+                  class="form-control custom-input"
                   name="calle1"
                   required
                 />
@@ -164,7 +164,7 @@
                 <label for="archivo"
                   ><h2><strong>calle 2 de domicilio</strong></h2></label
                 >
-                <input type="text" class="form-control-file" name="calle2" />
+                <input type="text" class="form-control custom-input" name="calle2" />
               </div>
 
               <!-- Ciudad -->
@@ -174,7 +174,7 @@
                 >
                 <input
                   type="text"
-                  class="form-control-file"
+                  class="form-control custom-input"
                   name="ciudad"
                   required
                 />
@@ -187,7 +187,7 @@
                 >
                 <input
                   type="text"
-                  class="form-control-file"
+                  class="form-control custom-input"
                   name="codigo"
                   required
                 />
@@ -200,13 +200,14 @@
                 >
                 <input
                   type="text"
-                  class="form-control-file"
+                  class="form-control custom-input"
                   name="telefono"
                   required
                 />
               </div>
 
-              <div class="container form-container">
+              <div class="container form-container mt-5">
+                <h1 class="mb-4">Datos de envío</h1>
                 <div class="row form-row">
                   <div class="col form-col text-center">
                     <label>
@@ -293,6 +294,41 @@
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </main>
-    <footer></footer>
+    <footer class="footer mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="logo.png" alt="LR Creative Logo" class="footer-logo">
+            <p>Innovative design solutions for your business needs.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Links</h5>
+            <ul class="footer-links">
+              <li><a href="/">Index</a></li>
+              <li><a href="/catalogo">Catalogo</a></li>
+              <li><a href="/contactanos">Contacto</a></li>
+              <li><a href="/conocenos">Conocenos</a></li>
+              <li><a href="/faq">Preguntas frecuentes</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Contact Us</h5>
+            <p>Email: contact@lrcreative.com</p>
+            <p>Phone: +1 234 567 890</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p class="copyright">&copy; 2023 LR Creative</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
