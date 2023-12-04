@@ -1,0 +1,363 @@
+/* Estilos Generales */
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4faff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Estilos a etiquteas */
+h1 {
+font-family: "Roboto", sans-serif;
+}
+  
+h5 {
+    font-size: 20px !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+  
+/* NavBar inicio */
+.page-title {
+    font-family: "Roboto Serif", sans-serif;
+    font-size: 64px;
+    font-weight: bold 800;
+}
+  
+.menu {
+    background-color: #ffc0cb;
+}
+  
+.menu__logo {
+    background-color: white;
+    margin-left: 20px;
+    text-align: center;
+    padding: 20px 50px;
+    border: 1px solid;
+}
+  
+.menu__link {
+    text-align: center;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+  
+.menu__link:hover {
+    color: black;
+    text-decoration: underline;
+}
+  
+.menu__item {
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    margin: 0 50px;
+    color: black;
+    text-decoration: none;
+}
+  
+.menu__item:hover {
+    color: black;
+    text-decoration: underline;
+}
+  
+.imagenes {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.productos__link {
+    text-decoration: none;
+}
+  
+.productos__link:hover {
+    text-decoration: underline;
+}
+  
+.productos__text {
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    color: black;
+}
+  
+.btn-div {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+  
+.productos__btn {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4d35e;
+    border-radius: 15px;
+    padding: 18px;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+}
+  
+.productos__btn:hover {
+    color: black;
+}
+/* NavBar final */
+
+/* index  inicio */
+.beneficios {
+    background-color: #ffc0cb;
+    width: 100%;
+    padding: 30px 0;
+}
+  
+.beneficios__img {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+  
+.beneficios__text {
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+  
+.page-subtitle {
+    font-family: "Roboto Serif";
+    font-size: 48px;
+    color: #ee6a81;
+}
+  
+.page-h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+}
+  
+.productos__link {
+    text-decoration: none;
+}
+  
+.productos__link:hover {
+    text-decoration: underline;
+}
+  
+.productos__text {
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    color: black;
+}
+  
+.btn-div {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+  
+.productos__btn {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4d35e;
+    border-radius: 15px;
+    padding: 30px;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+}
+  
+.productos__btn:hover {
+    color: black;
+}
+/* index final */
+  
+/* Preguntas Inicio */
+.espaciado-lineas {
+    font-size: 20px;
+    line-height: 1.5em; 
+}
+  
+.card {
+    margin-bottom: 1rem;
+}
+  
+.card-header {
+    cursor: pointer;
+    background-color: #ffc0cb;
+    border: 1px solid #ff91af;
+}
+  
+.card-header .btn {
+    text-align: left;
+    width: 100%;
+    color: #000;
+    font-size: 1.25rem;
+    padding: 0.75rem 1.25rem;
+    background-color: #ffc0cb;
+    border: none;
+}
+  
+.card-header .btn:hover,
+.card-header .btn:focus {
+    text-decoration: none;
+}
+  
+.card-body {
+    background-color: #f8f9fa;
+    border-left: 1px solid #ff91af;
+    border-right: 1px solid #ff91af;
+    border-bottom: 1px solid #ff91af;
+}
+  
+.btn-toggle .fas {
+    float: right;
+    transition: transform 0.2s ease-in-out;
+}
+/* Preguntas Final */
+
+/* Catalogo inicio */
+.nombre {
+    font-family: "Roboto Serif", serif;
+    font-size: 32px;
+  }
+
+.descP {
+    font-size: 16px;
+}
+/* Catalogo final */
+
+/* Footer inicio */
+footer {
+    margin-top: auto;
+}
+/* Footer final */
+
+/* Contactanos Inicio */
+.redes__text {
+    font-family: "Roboto", sans-serif;
+    font-size: 36px;
+}
+  
+.form-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+}
+  
+.contacto-form {
+    width: 50%;
+    margin: auto;
+    font-size: 24px;
+}
+  
+.contacto__input {
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+}
+  
+.contacto__input-big {
+    height: 200px;
+}
+  
+.contacto-form__btn {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4d35e;
+    width: 250px;
+    border-radius: 15px;
+    padding: 30px;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+}
+/* Contactanos Inicio */  
+
+/* Conocenos inicio */
+.tituloConocenos {
+    font-family: "Roboto Serif", serif;
+}
+
+.parrafoConocenos {
+    font-size: 24px;
+}
+/* Conocenos final */
+
+/* Login inicio */
+.login-container {
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 60px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+    width: 500px; /* Ajusta según tus necesidades */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-primary {
+    background-color: #ffc107;
+    color: #000;
+    border: 1px solid #ffc107; 
+}
+/* Login final */
+
+/* Productos inicio */
+.custom-input {
+    width: 350px;
+    padding: 10px;
+    font-size: 16px; 
+    height: auto;
+}
+  
+.form-col {
+    width: 60px;
+}
+
+/* Esconder botones de los radio buttons */
+.form-radio {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.form-img {
+    width: 100px;
+    display: inline;
+}
+  
+/* Modificar borde para que sea redondo y blanco */
+  .form-radio + .form-img {
+    cursor: pointer;
+    border: 5px solid white;
+}
+  
+/* Cambiar color del borde a azul cuando se seleccione */
+  .form-radio:checked + .form-img {
+    border: 5px solid blue;
+}
+  
+#no:checked + .form-img {
+    border: 5px solid blue;
+}
+  
+.form-button {
+    font-size: 24px;
+}
+ /* Productos final */ 
+
+.pregunta {
+    font-size: 20px;
+}
+
+.resPreg{
+    font-size: 16px;
+}

@@ -4,27 +4,26 @@
     <title>LRCreative</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../static/css/styles.css" />
-    <link rel="stylesheet" href="../static/css/footer.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:opsz,wght@8..144,800&display=swap"
-      rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:opsz,wght@8..144,800&display=swap" rel="stylesheet"
     />
+
+    <!-- Estilos-->
     <link rel="stylesheet" href="../static/css/productos.css" />
+    <link rel="stylesheet" href="../static/css/styles2.css" />
+
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
   </head>
   <body>
     <header>
@@ -71,7 +70,7 @@
           </div>
 
           <div class="col-md-6">
-            <h1 class="mb-4">{{producto[1]}} personalizables</h1>
+            <h1 class="mb-4 prodNombre">{{producto[1]}} personalizables</h1>
             <p class="espaciado-lineas mb-4">{{producto[4]}}</p>
 
             <!-- Formulario para elegir color y cantidad -->
@@ -82,7 +81,7 @@
             >
               <div class="form-group mb-4">
                 <label for="color" class="mr-4"
-                  ><h2><strong>Color</strong></h2></label
+                  ><h2 class="subtituloProd"><strong>Color</strong></h2></label
                 >
                 <select class="form-control custom-input" name="color" required>
                   <option value="rojo">Rojo</option>
@@ -94,7 +93,7 @@
               <!-- Formulario para elegir cantidad -->
               <div class="form-group mb-4">
                 <label for="cantidad" class="mr-2"
-                  ><h2><strong>Cantidad</strong></h2></label
+                  ><h2 class="subtituloProd"><strong>Cantidad</strong></h2></label
                 >
                 <input
                   type="number"
@@ -107,7 +106,7 @@
               <!-- diseño desde archivo -->
               <div class="form-group mb-4 ">
                 <label for="archivo">
-                  <h2><strong>Diseño</strong></h2>
+                  <h2 class="subtituloProd"><strong>Diseño</strong></h2>
                 </label>
                 <input
                   class="form-control-file custom-input"
@@ -119,11 +118,11 @@
               </div>
               <br />
 
-              <h1 class="mt-5">Datos de envío</h1>
+              <h1 class="mt-5 prodNombre">Datos de envío</h1>
               <!-- Nombre del cliente-->
               <div class="form-group mb-4">
                 <label for="archivo"
-                  ><h2><strong>Nombre</strong></h2></label
+                  ><h2 class="subtituloProd"><strong>Nombre</strong></h2></label
                 >
                 <input
                   type="text"
@@ -136,7 +135,7 @@
               <!-- Mail del cliente-->
               <div class="form-group mb-4">
                 <label for="archivo"
-                  ><h2><strong>Correo electrónico</strong></h2></label
+                  ><h2 class="subtituloProd"><strong>Correo electrónico</strong></h2></label
                 >
                 <input
                   type="text"
@@ -149,7 +148,7 @@
               <!-- Calle 1-->
               <div class="form-group mb-4">
                 <label for="archivo"
-                  ><h2><strong>Calle 1 de domicilio</strong></h2></label
+                  ><h2 class="subtituloProd"><strong>Calle 1 de domicilio</strong></h2></label
                 >
                 <input
                   type="text"
@@ -162,7 +161,7 @@
               <!-- calle 2-->
               <div class="form-group mb-4">
                 <label for="archivo"
-                  ><h2><strong>calle 2 de domicilio</strong></h2></label
+                  ><h2 class="subtituloProd"><strong>calle 2 de domicilio</strong></h2></label
                 >
                 <input type="text" class="form-control custom-input" name="calle2" />
               </div>
@@ -170,7 +169,7 @@
               <!-- Ciudad -->
               <div class="form-group mb-4">
                 <label for="archivo"
-                  ><h2><strong>Ciudad</strong></h2></label
+                  ><h2 class="subtituloProd"><strong>Ciudad</strong></h2></label
                 >
                 <input
                   type="text"
@@ -183,7 +182,7 @@
               <!-- Codigo postal -->
               <div class="form-group mb-4">
                 <label for="codigo"
-                  ><h2><strong>Código postal</strong></h2></label
+                  ><h2 class="subtituloProd"><strong>Código postal</strong></h2></label
                 >
                 <input
                   type="text"
@@ -196,7 +195,7 @@
               <!-- Teléfono -->
               <div class="form-group mb-4">
                 <label for="codigo"
-                  ><h2><strong>Teléfono</strong></h2></label
+                  ><h2 class="subtituloProd"><strong>Teléfono</strong></h2></label
                 >
                 <input
                   type="text"
@@ -207,7 +206,7 @@
               </div>
 
               <div class="container form-container mt-5">
-                <h1 class="mb-4">Datos de envío</h1>
+                <h1 class="mb-4 prodNombre">Método de pago</h1>
                 <div class="row form-row">
                   <div class="col form-col text-center">
                     <label>
@@ -294,41 +293,13 @@
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </main>
-    <footer class="footer mt-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <img src="logo.png" alt="LR Creative Logo" class="footer-logo">
-            <p>Innovative design solutions for your business needs.</p>
-          </div>
-          <div class="col-md-4">
-            <h5>Links</h5>
-            <ul class="footer-links">
-              <li><a href="/">Index</a></li>
-              <li><a href="/catalogo">Catalogo</a></li>
-              <li><a href="/contactanos">Contacto</a></li>
-              <li><a href="/conocenos">Conocenos</a></li>
-              <li><a href="/faq">Preguntas frecuentes</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h5>Contact Us</h5>
-            <p>Email: contact@lrcreative.com</p>
-            <p>Phone: +1 234 567 890</p>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <p class="copyright">&copy; 2023 LR Creative</p>
-          </div>
-        </div>
-      </div>
+    
+    <footer class="bg-secondary text-light text-center py-3 mt-5">
+      <p class="h5">&copy; 2023 LRCreative. Todos los derechos reservados.</p>
+      <p class="h6">Dirección: Mar Negro 1966-B, fracc. Bernardo Reyes, Monterrey Nuevo León</p>
+      <p class="h6">Teléfono: 8116844639</p>
+      <p class="h6">Email: ventas@Ircreative.com.mx</p>
     </footer>
+    
   </body>
 </html>
