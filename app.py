@@ -23,6 +23,20 @@ def contactanos():
 def catalogo():
   return render_template('catalogo.html')
 
+@app.route('/productos/<string:id>')
+def productos(id):
+  cursor = mysql.connection.cursor()
+  cursor.execute('SELECT * FROM Producto WHERE id=%s', [id])
+  producto = cursor.fetchone()
+  print(producto)
+  return render_template('productos.html', producto=producto)
+
+@app.route('/guardarPedido/<string:id>', methods=['POST'])
+def guardarPedido(id):
+  print(request.form['metodo'])
+  return 'hello'
+  
+
 @app.route('/conocenos')
 def conocenos():
   return render_template('conocenos.html')
@@ -57,3 +71,6 @@ def loginAdmin():
         return render_template('admin.html')
     else:
         return redirect(url_for('/login'))
+
+if __name__ == '__main__':
+    app.run(debug=True)

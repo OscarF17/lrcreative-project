@@ -1,0 +1,38 @@
+/* Estilos para el form */
+.form-container {
+}
+
+.form-col {
+  width: 60px;
+}
+/* Esconder botones de los radio buttons */
+.form-radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.form-img {
+  width: 100px;
+  display: inline;
+}
+
+/* Modificar borde para que sea redondo y blanco */
+.form-radio + .form-img {
+  cursor: pointer;
+  border: 5px solid white;
+}
+
+/* Cambiar color del borde a azul cuando se seleccione */
+.form-radio:checked + .form-img {
+  border: 5px solid blue;
+}
+
+#no:checked + .form-img {
+  border: 5px solid blue;
+}
+
+.form-button {
+  font-size: 24px;
+}
