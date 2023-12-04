@@ -296,7 +296,7 @@ footer {
   padding: 60px;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
-  width: 500px; /* Ajusta según tus necesidades */
+  width: 500px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -355,6 +355,7 @@ footer {
 }
 /* Productos final */
 
+/* Preguntas inicio */
 .pregunta {
   font-size: 20px;
 }
@@ -362,7 +363,9 @@ footer {
 .resPreg {
   font-size: 16px;
 }
+/* Preguntas final */
 
+/* Admin inicio */
 .admin-h2 {
   font-size: 30px;
 }
@@ -394,3 +397,4 @@ footer {
 .info-cliente input {
   font-size: 20px;
 }
+/* Admin final */
