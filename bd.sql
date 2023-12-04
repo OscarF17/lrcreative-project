@@ -85,14 +85,13 @@ END ..
 DELIMITER ;
 
 INSERT INTO Producto (nombre, precio, foto, descripcion) VALUES
-('Playeras', 250.00, 'playeras.jpg', 'Cómodas playeras personalizadas con tus diseños favoritos. Disponibles en distintos tamaños y colores'),
-('Camisas Polo', 300.00, 'polo.jpg', 'Representa a tu escuela u organización con camisas polo de alta cálidad'),
+('Playeras', 250.00, 'playeras.jpg', 'Cómodas playeras personalizadas con tus diseños favoritos. Disponibles en distintos tamaños y colores'), ('Camisas Polo', 300.00, 'polo.jpg', 'Representa a tu escuela u organización con camisas polo de alta cálidad'),
 ('Gorras', 150.00, 'gorras.jpg', 'Gorras unitalla ideales para toda clase de eventos, garantizadas a quedarle a todo mundo'),
 ('Tazas', 100.00, 'tazas.jpg', 'Ideales para regalos, personaliza tazas de distintos colores con diseños y mensajes personalizables'),
 ('Termos', 200.00, 'termos.jpg', 'Perfectos para regalos y eventos. Personaliza tus termos de distintos colores con el logo de tu organización');
 
 INSERT INTO Usuario (nombre, email, password) VALUES 
-('Oscar Flores', 'oscarlflores@hotmail.com', 'pbkdf2:sha256:260000$q9gOWvEsc12VVxIb$cba1b25127eda4c0e4137470ffedab24b355371db0397d4120e6c75d20ddff28'),
+('Oscar Flores', 'oscarlflores@hotmail.com', 'scrypt:32768:8:1$DQYbQ7J9IJmYuGN0$2de560d0e0b969e38366f1166fd183eece8e23a8ef2720f4382cfd6c4f90135eee64b76cc3d371574ad7e1655487a7b64a522ee5e631ee65f9c42eab8a7b126a'),
 ('Roberto Leija', 'roberto.leija@udem.edu', 'pbkdf2:sha256:260000$5Q6WZya4Hd0z79GZ$938dfd8cc120494c6f384c63a63a8cdb01d0bd3c04487e2ca178b8742de95fef'),
 ('Eduardo Flores', 'eduardo.flores@udem.edu0', 'pbkdf2:sha256:260000$KQkoQvXg5oPSvMp4$438ce75f0155bb6ac048b6fc571ce85017289d9550374b72969c6c6953b9b8e7'),
 ('David Zavala', 'david.zavala@udem.edu', 'pbkdf2:sha256:260000$pkoVJcGYzpZlFkGr$3b9c1c98ef805d7918b1c55229b13f86a8f05249fcff4b3479f83dbcf6d30a5c'),
