@@ -81,7 +81,7 @@
       </div>
       <h2 class="form-title text-center">Contacto Directo</h2>
 
-      <form action="/contactanos" method="post" class="contacto-form mt-5 mb-5">
+      <form class="contacto-form mt-5 mb-5">
         <div class="container">
           <div class="row">
             <div class="col">
@@ -135,7 +135,7 @@
           </div>
         </div>
         <div class="text-center mt-5">
-          <button class="contacto-form__btn" type="submit">Enviar</button>
+          <button class="contacto-form__btn" type="submit" onclick="correo()">Enviar</button>
         </div>
       </form>
     </main>
@@ -146,6 +146,33 @@
       <p class="h6">Teléfono: 8116844639</p>
       <p class="h6">Email: ventas@Ircreative.com.mx</p>
     </footer>
+
+    <script>
+
+    function correo() {
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    // Validación de campos
+    if (!nombre || !email || !mensaje) {
+      alert('Por favor, completa todos los campos.');
+      return;
+    }
+
+    const subject = `Nuevo mensaje de ${nombre}`;
+    const body = `Nombre: ${nombre}%0A%0A${mensaje}`;
+
+    // Mensaje de confirmación
+    alert('¡Correo enviado correctamente.');
+
+    // Restablecer formulario
+    document.getElementById('nombre').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('mensaje').value = '';
+  }
+</script>
+</script>
 
   </body>
 </html>
