@@ -30,7 +30,7 @@ def catalogo():
 @app.route('/productos/<string:id>')
 def productos(id):
   mensaje = request.args.get('success', 'none')
-  print(mensaje)
+  # print(mensaje)
   cursor = mysql.connection.cursor()
   cursor.execute('SELECT * FROM Producto WHERE id=%s', [id])
   producto = cursor.fetchone()
@@ -112,7 +112,7 @@ def admin():
           cursor.callproc('verPedidosDetalles')
           pedidos = cursor.fetchall()
           cursor.nextset()
-          print(pedidos)
+          # print(pedidos)
           cursor.close()
           return render_template('admin.html', pedidos=pedidos)
       else:
@@ -124,23 +124,23 @@ def admin():
         cursor.callproc('verPedidosDetalles')
         pedidos = cursor.fetchall()
         cursor.nextset()
-        print(pedidos)
+        # print(pedidos)
         cursor.close()
         return render_template('admin.html', pedidos=pedidos)
       else:
         return redirect('/loginAdmin')
 
-@app.route('/admin/detalles/<string:id>')
+@app.route('/detalles/<string:id>')
 def detalles(id):
   cursor = mysql.connection.cursor()
   cursor.execute('SELECT * FROM Pedido, DetallePedido, Producto WHERE Pedido.id = DetallePedido.pedido_id AND DetallePedido.producto_id = Producto.id AND Pedido.id = %s', [id])
   detalles = cursor.fetchone()
-  print(detalles)
+  # print(detalles)
   return render_template('detalles.html', detalles = detalles)
 
 @app.route('/admin/editar/<string:id>', methods=['POST'])
 def editar(id):
-  print(request.form)
+  # print(request.form)
   estado = request.form['estado']
   nombre = request.form['nombre']
   email = request.form['email']

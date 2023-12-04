@@ -6,24 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:opsz,wght@8..144,800&display=swap" rel="stylesheet"
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:opsz,wght@8..144,800&display=swap"
+      rel="stylesheet"
     />
 
     <!-- Estilos-->
     <link rel="stylesheet" href="../static/css/productos.css" />
     <link rel="stylesheet" href="../static/css/styles2.css" />
 
-
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
   </head>
   <body>
     <header>
@@ -93,7 +101,9 @@
               <!-- Formulario para elegir cantidad -->
               <div class="form-group mb-4">
                 <label for="cantidad" class="mr-2"
-                  ><h2 class="subtituloProd"><strong>Cantidad</strong></h2></label
+                  ><h2 class="subtituloProd">
+                    <strong>Cantidad</strong>
+                  </h2></label
                 >
                 <input
                   type="number"
@@ -104,7 +114,7 @@
               </div>
 
               <!-- diseño desde archivo -->
-              <div class="form-group mb-4 ">
+              <div class="form-group mb-4">
                 <label for="archivo">
                   <h2 class="subtituloProd"><strong>Diseño</strong></h2>
                 </label>
@@ -135,7 +145,9 @@
               <!-- Mail del cliente-->
               <div class="form-group mb-4">
                 <label for="archivo"
-                  ><h2 class="subtituloProd"><strong>Correo electrónico</strong></h2></label
+                  ><h2 class="subtituloProd">
+                    <strong>Correo electrónico</strong>
+                  </h2></label
                 >
                 <input
                   type="text"
@@ -148,7 +160,9 @@
               <!-- Calle 1-->
               <div class="form-group mb-4">
                 <label for="archivo"
-                  ><h2 class="subtituloProd"><strong>Calle 1 de domicilio</strong></h2></label
+                  ><h2 class="subtituloProd">
+                    <strong>Calle 1 de domicilio</strong>
+                  </h2></label
                 >
                 <input
                   type="text"
@@ -161,9 +175,15 @@
               <!-- calle 2-->
               <div class="form-group mb-4">
                 <label for="archivo"
-                  ><h2 class="subtituloProd"><strong>calle 2 de domicilio</strong></h2></label
+                  ><h2 class="subtituloProd">
+                    <strong>calle 2 de domicilio</strong>
+                  </h2></label
                 >
-                <input type="text" class="form-control custom-input" name="calle2" />
+                <input
+                  type="text"
+                  class="form-control custom-input"
+                  name="calle2"
+                />
               </div>
 
               <!-- Ciudad -->
@@ -182,7 +202,9 @@
               <!-- Codigo postal -->
               <div class="form-group mb-4">
                 <label for="codigo"
-                  ><h2 class="subtituloProd"><strong>Código postal</strong></h2></label
+                  ><h2 class="subtituloProd">
+                    <strong>Código postal</strong>
+                  </h2></label
                 >
                 <input
                   type="text"
@@ -195,7 +217,9 @@
               <!-- Teléfono -->
               <div class="form-group mb-4">
                 <label for="codigo"
-                  ><h2 class="subtituloProd"><strong>Teléfono</strong></h2></label
+                  ><h2 class="subtituloProd">
+                    <strong>Teléfono</strong>
+                  </h2></label
                 >
                 <input
                   type="text"
@@ -293,13 +317,22 @@
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </main>
-    
+
     <footer class="bg-secondary text-light text-center py-3 mt-5">
       <p class="h5">&copy; 2023 LRCreative. Todos los derechos reservados.</p>
-      <p class="h6">Dirección: Mar Negro 1966-B, fracc. Bernardo Reyes, Monterrey Nuevo León</p>
+      <p class="h6">
+        Dirección: Mar Negro 1966-B, fracc. Bernardo Reyes, Monterrey Nuevo León
+      </p>
       <p class="h6">Teléfono: 8116844639</p>
       <p class="h6">Email: ventas@Ircreative.com.mx</p>
     </footer>
-    
+
+    <script>
+      let mensaje = "{{mensaje}}";
+      console.log(mensaje);
+      if (mensaje === "True") {
+        alert("¡Pedido realizado con éxito");
+      }
+    </script>
   </body>
 </html>
