@@ -150,29 +150,31 @@
     <script>
 
     function correo() {
-    const nombre = document.getElementById('nombre').value;
-    const email = document.getElementById('email').value;
-    const mensaje = document.getElementById('mensaje').value;
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const mensaje = document.getElementById('mensaje').value;
 
-    // Validación de campos
-    if (!nombre || !email || !mensaje) {
-      alert('Por favor, completa todos los campos.');
-      return;
+      // Validación de campos
+      if (!nombre || !email || !mensaje) {
+        alert('Por favor, completa todos los campos.');
+        return;
+      }
+
+      const subject = `Nuevo mensaje de ${nombre}`;
+      const body = `Nombre: ${nombre} \n\n Mensaje: ${mensaje}`;
+
+      const mailtoLink = `mailto:roberto.leija@udem.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      // Abrir cliente de correo 
+      alert('Abriendo correo personal.');
+      window.location.href = mailtoLink;
+
+
+      // Restablecer formulario
+      document.getElementById('nombre').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('mensaje').value = '';
     }
-
-    const subject = `Nuevo mensaje de ${nombre}`;
-    const body = `Nombre: ${nombre}%0A%0A${mensaje}`;
-
-    // Mensaje de confirmación
-    alert('¡Correo enviado correctamente.');
-
-    // Restablecer formulario
-    document.getElementById('nombre').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('mensaje').value = '';
-  }
-</script>
-</script>
-
+  </script>
   </body>
 </html>
