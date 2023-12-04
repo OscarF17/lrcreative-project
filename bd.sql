@@ -63,6 +63,27 @@ CREATE TABLE DetallePedido(
     FOREIGN KEY (producto_id) REFERENCES Producto(id)
 );
 
+DELIMITER ..
+CREATE PROCEDURE crearDetalle(
+    IN in_pedido INT,
+    IN in_producto INT,
+    IN in_cantidad INT,
+    IN in_color VARCHAR(50)
+)
+BEGIN
+    INSERT INTO DetallePedido (pedido_id, producto_id, cantidad, color) VALUES
+    (in_pedido, in_producto, in_cantidad, in_color);
+END ..
+DELIMITER ;
+
+DELIMITER ..
+CREATE PROCEDURE verPedidosDetalles(
+)
+BEGIN
+    SELECT * from Pedido, DetallePedido, Producto WHERE Pedido.id = DetallePedido.pedido_id AND DetallePedido.producto_id = Producto.id;
+END ..
+DELIMITER ;
+
 INSERT INTO Producto (nombre, precio, foto, descripcion) VALUES
 ('Playeras', 250.00, 'playeras.jpg', 'Cómodas playeras personalizadas con tus diseños favoritos. Disponibles en distintos tamaños y colores'),
 ('Camisas Polo', 300.00, 'polo.jpg', 'Representa a tu escuela u organización con camisas polo de alta cálidad'),

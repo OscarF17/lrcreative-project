@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, url_for, session, redirect
 from flask_mysqldb import MySQL 
 from werkzeug.security import check_password_hash, generate_password_hash
+from werkzeug.utils import secure_filename
+import os, io
 
 app = Flask(__name__)
 mysql = MySQL(app)
@@ -25,16 +27,48 @@ def catalogo():
 
 @app.route('/productos/<string:id>')
 def productos(id):
+  mensaje = request.args.get('success', 'none')
+  print(mensaje)
   cursor = mysql.connection.cursor()
   cursor.execute('SELECT * FROM Producto WHERE id=%s', [id])
   producto = cursor.fetchone()
-  print(producto)
-  return render_template('productos.html', producto=producto)
+  # print(producto)
+  return render_template('productos.html', producto=producto, mensaje=mensaje)
 
 @app.route('/guardarPedido/<string:id>', methods=['POST'])
 def guardarPedido(id):
-  print(request.form['metodo'])
-  return 'hello'
+  color = request.form['color']
+  cantidad = request.form['cantidad']
+  nombre = request.form['nombre']
+  email = request.form['email']
+  calle1 = request.form['calle1']
+  calle2 = request.form['calle2']
+  ciudad = request.form['ciudad']
+  codigo = request.form['codigo']
+  telefono = request.form['telefono']
+  metodo = request.form['metodo']
+  file = request.files['archivo']
+
+  # Guardar pedido en la base de datos
+  cursor = mysql.connection.cursor()
+  cursor.callproc('crearPedido', [nombre, email, calle1, calle2, ciudad, codigo, telefono, metodo])
+  mysql.connection.commit()
+
+  # Obtener el ID del pedido que se acaba de guardar
+  # Como el ID es autoincremental, debe de ser el más grande
+  cursor.execute('SELECT MAX(id) FROM Pedido')
+  id_pedido = cursor.fetchone()[0]
+
+  # Relacionar pedido con producto 
+  cursor.callproc('crearDetalle', [id_pedido, id, cantidad, color])
+  mysql.connection.commit()
+
+
+  # Guardar imagen en sistema para poder desplegarla
+  # Guardar con el id del pedido
+  file.save('./static/images/imagenes-usuarios/'+str(id_pedido)+'.jpg')
+
+  return redirect('/productos/'+str(id)+'?success=True')
   
 
 @app.route('/conocenos')

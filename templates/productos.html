@@ -75,12 +75,16 @@
             <p class="espaciado-lineas mb-4">{{producto[4]}}</p>
 
             <!-- Formulario para elegir color y cantidad -->
-            <form action="/guardarPedido/{{producto[0]}}" method="post">
+            <form
+              action="/guardarPedido/{{producto[0]}}"
+              enctype="multipart/form-data"
+              method="POST"
+            >
               <div class="form-group d-flex align-items-center mb-4">
                 <label for="color" class="mr-4"
                   ><h2><strong>Color</strong></h2></label
                 >
-                <select class="form-control" name="color">
+                <select class="form-control" name="color" required>
                   <option value="rojo">Rojo</option>
                   <option value="azul">Azul</option>
                   <option value="verde">Verde</option>
@@ -92,16 +96,28 @@
                 <label for="cantidad" class="mr-2"
                   ><h2><strong>Cantidad</strong></h2></label
                 >
-                <input type="number" class="form-control" name="cantidad" />
+                <input
+                  type="number"
+                  class="form-control"
+                  name="cantidad"
+                  required
+                />
               </div>
 
               <!-- diseño desde archivo -->
               <div class="form-group mb-4">
-                <label for="archivo"
-                  ><h2><strong>Diseño</strong></h2></label
-                >
-                <input type="file" class="form-control-file" name="archivo" />
+                <label for="archivo">
+                  <h2><strong>Diseño</strong></h2>
+                </label>
+                <input
+                  class="form-control-file"
+                  type="file"
+                  name="archivo"
+                  accept="image/*"
+                  required
+                />
               </div>
+              <br />
 
               <h3>Ingrese sus datos de envío</h3>
               <!-- Nombre del cliente-->
@@ -109,7 +125,25 @@
                 <label for="archivo"
                   ><h2><strong>Nombre</strong></h2></label
                 >
-                <input type="text" class="form-control-file" name="nombre" />
+                <input
+                  type="text"
+                  class="form-control-file"
+                  name="nombre"
+                  required
+                />
+              </div>
+
+              <!-- Mail del cliente-->
+              <div class="form-group mb-4">
+                <label for="archivo"
+                  ><h2><strong>Correo electrónico</strong></h2></label
+                >
+                <input
+                  type="text"
+                  class="form-control-file"
+                  name="email"
+                  required
+                />
               </div>
 
               <!-- Calle 1-->
@@ -117,7 +151,12 @@
                 <label for="archivo"
                   ><h2><strong>Calle 1 de domicilio</strong></h2></label
                 >
-                <input type="text" class="form-control-file" name="calle1" />
+                <input
+                  type="text"
+                  class="form-control-file"
+                  name="calle1"
+                  required
+                />
               </div>
 
               <!-- calle 2-->
@@ -133,7 +172,12 @@
                 <label for="archivo"
                   ><h2><strong>Ciudad</strong></h2></label
                 >
-                <input type="text" class="form-control-file" name="ciudad" />
+                <input
+                  type="text"
+                  class="form-control-file"
+                  name="ciudad"
+                  required
+                />
               </div>
 
               <!-- Codigo postal -->
@@ -141,7 +185,12 @@
                 <label for="codigo"
                   ><h2><strong>Código postal</strong></h2></label
                 >
-                <input type="text" class="form-control-file" name="codigo" />
+                <input
+                  type="text"
+                  class="form-control-file"
+                  name="codigo"
+                  required
+                />
               </div>
 
               <!-- Teléfono -->
@@ -149,7 +198,12 @@
                 <label for="codigo"
                   ><h2><strong>Teléfono</strong></h2></label
                 >
-                <input type="text" class="form-control-file" name="telefono" />
+                <input
+                  type="text"
+                  class="form-control-file"
+                  name="telefono"
+                  required
+                />
               </div>
 
               <div class="container form-container">
@@ -162,6 +216,7 @@
                         type="radio"
                         name="metodo"
                         value="visa"
+                        checked
                       />
                       <img
                         class="form-img"
