@@ -168,6 +168,7 @@
         const nombre = document.getElementById("nombre").value;
         const email = document.getElementById("email").value;
         const mensaje = document.getElementById("mensaje").value;
+        const telefono = document.getElementById("mensaje").value;
 
         // Validación de campos
         if (!nombre || !email || !mensaje) {
@@ -176,11 +177,11 @@
         }
 
         const subject = `Nuevo mensaje de ${nombre}`;
-        const body = `Nombre: ${nombre} \n\n Mensaje: ${mensaje}`;
+        const body = `Nombre: ${nombre} \n\n Mensaje: ${mensaje}\n\nTeléfono: ${telefono}\n\nCorreo: ${email}`;
 
         const mailtoLink = `mailto:oscar.floresl@udem.edu?subject=${encodeURIComponent(
           subject
-        )}&body=${encodeURIComponent(body)}`;
+        )}&body=${encodeURIComponent(body)}&from=${encodeURIComponent(email)}`;
 
         // Abrir cliente de correo
         alert("Abriendo correo personal.");
