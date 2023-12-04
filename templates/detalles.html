@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalles</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/styles.css" />
+  </head>
+  <body>
+    <h1 class="text-center display-1">Detalles del pedido {{detalles[0]}}</h1>
+    <h2 class="text-center display-4">Ver y actualizar detalles del pedido</h2>
+    <form
+      action="/admin/editar/{{detalles[0]}}"
+      class="w-50 mx-auto mt-5 mb-5"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <h2>Producto</h2>
+      <h3>Producto: {{detalles[17]}}</h3>
+      <h4>Estado: {{detalles[9]}}</h4>
+      <h5>Realizado : {{detalles[8]}}</h5>
+      <h5>Actualizado en: {{detalles[10]}}</h5>
+      <select name="estado" id="estado">
+        <option value="pendiente" selected>Pendiente</option>
+        <option value="completado">Completado</option>
+      </select>
+      <p>Cantidad: {{detalles[14]}}</p>
+      <p>Precio unitario: {{detalles[18]}}</p>
+      <p>Total: {{detalles[14] * detalles[18]}}</p>
+      <p>Método de pago</p>
+      <img
+        src="../static/images/productos/{{detalles[11]}}.png"
+        alt="{{detalles[11]}}"
+      />
+      <h2>Cliente</h2>
+      <div class="form-group">
+        <label for="nombre">Nombre del cliente</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nombre"
+          value="{{detalles[1]}}"
+          name="nombre"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Correo del cliente</label>
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          name="email"
+          value="{{detalles[2]}}"
+        />
+      </div>
+      <h2>Dirección</h2>
+      <div class="form-group">
+        <label for="calle1">Calle 1</label>
+        <input
+          type="text"
+          class="form-control"
+          id="calle1"
+          name="calle1"
+          value="{{detalles[3]}}"
+        />
+      </div>
+      <div class="form-group">
+        <label for="calle2">Calle 2</label>
+        <input
+          type="text"
+          class="form-control"
+          id="calle2"
+          name="calle2"
+          value="{{detalles[4]}}"
+        />
+      </div>
+      <div class="form-group">
+        <label for="ciudad">Ciudad</label>
+        <input
+          type="text"
+          class="form-control"
+          id="ciudad"
+          name="ciudad"
+          value="{{detalles[5]}}"
+        />
+      </div>
+      <div class="form-group">
+        <label for="codigo">Código postal</label>
+        <input
+          type="text"
+          class="form-control"
+          id="codigo"
+          name="codigo"
+          value="{{detalles[6]}}"
+        />
+      </div>
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input
+          type="text"
+          class="form-control"
+          id="telefono"
+          name="telefono"
+          value="{{detalles[7]}}"
+        />
+      </div>
+      <button type="submit " class="btn btn-primary">Actualizar pedido</button>
+      <a href="/admin/eliminar/{{detalles[0]}}" class="btn btn-danger"
+        >Eliminar pedido</a
+      >
+    </form>
+  </body>
+</html>

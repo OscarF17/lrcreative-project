@@ -3,9 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Administrador</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/styles.css" />
   </head>
   <body>
-    esta es la vista de admin
+    <main>
+      <h1 class="text-center display-1 mb-5">Lista de pedidos</h1>
+      <div class="container">
+        {% for pedido in pedidos %}
+        <div class="row">
+          <div class="col-2 border text-center">
+            <img
+              src="../static/images/imagenes-usuarios/{{pedido[0]}}.jpg"
+              alt="Pedido {{pedido[0]}}"
+              class="w-100"
+            />
+          </div>
+          <div class="col-5 border">
+            <h2>Pedido {{pedido[0]}}</h2>
+            <h3>Producto: {{pedido[17]}}</h3>
+            <p>Cantidad: {{pedido[14]}}</p>
+            <p>Total: ${{pedido[18] * pedido[14]}}</p>
+          </div>
+          <div class="col-5 border">
+            <h2>{{pedido[1]}}</h2>
+            <h3>{{pedido[2]}}</h3>
+            <p>Estado: {{pedido[9]}}</p>
+            <p>Realizado en: {{pedido[8]}}</p>
+            <a href="/admin/detalles/{{pedido[0]}}">Ver detalles</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </main>
   </body>
 </html>

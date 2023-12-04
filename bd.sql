@@ -84,6 +84,16 @@ BEGIN
 END ..
 DELIMITER ;
 
+DELIMITER ..
+CREATE PROCEDURE actualizarPedidoEstado(
+    IN nuevo VARCHAR(200),
+    IN edit_id INT
+)
+BEGIN
+    UPDATE Pedido SET status = nuevo WHERE id = edit_id;
+END ..
+DELIMITER ;
+
 INSERT INTO Producto (nombre, precio, foto, descripcion) VALUES
 ('Playeras', 250.00, 'playeras.jpg', 'Cómodas playeras personalizadas con tus diseños favoritos. Disponibles en distintos tamaños y colores'), ('Camisas Polo', 300.00, 'polo.jpg', 'Representa a tu escuela u organización con camisas polo de alta cálidad'),
 ('Gorras', 150.00, 'gorras.jpg', 'Gorras unitalla ideales para toda clase de eventos, garantizadas a quedarle a todo mundo'),
